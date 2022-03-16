@@ -51,7 +51,18 @@ for(value of supplyChanges){
 console.log('---  Stretch Goals  ---');
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
-
+for(value of supplyChanges){
+    if(value > 0){
+        console.log( 'Added', value, 'parts')
+    }  //code if positive
+    else if (value === 0){
+        console.log( 'No change.' )
+    }//code if 0
+    else {
+        console.log( 'Removed', Math.abs(value), 'parts' )
+    }
+    //removal code. The double negative was irking me so that Math.abs seemed like an elegants solution!
+}
 // 8. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
 console.log('8. Total supplies available is:');
