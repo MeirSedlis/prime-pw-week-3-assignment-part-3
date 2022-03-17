@@ -34,15 +34,15 @@ supplyChanges.push(25);
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-for(value of supplyChanges){
-    if(value > 0){
-        console.log( 'Added', value, 'parts')
+for(let i=0; i<supplyChanges.length; i++){
+    if(i > 0){
+        console.log( 'Added', i, 'parts')
     }  //code if positive
-    else if (value === 0){
+    else if (i === 0){
         console.log( 'No change.' )
     }//code if 0
     else {
-        console.log( 'Removed', Math.abs(value), 'parts' )
+        console.log( 'Removed', Math.abs(i), 'parts' )
     }
     //removal code. The double negative was irking me so that Math.abs seemed like an elegants solution!
 }
